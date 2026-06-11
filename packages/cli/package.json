@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/semantic-api/apidiff.git",
+    "url": "https://github.com/Abhik2005/apidiff.git",
     "directory": "packages/cli"
   },
   "publishConfig": {
