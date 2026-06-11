@@ -1,0 +1,31 @@
+{
+  "name": "@apidiff/cli",
+  "version": "0.1.0",
+  "description": "CLI for apidiff",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "apidiff": "dist/index.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semantic-api/apidiff.git",
+    "directory": "packages/cli"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@apidiff/core": "workspace:*",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}

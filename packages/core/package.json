@@ -1,0 +1,31 @@
+{
+  "name": "@apidiff/core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semantic-api/apidiff.git",
+    "directory": "packages/core"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm && tsc --emitDeclarationOnly -p tsconfig.json"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "graphql": "^16.14.1",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^9.0.0",
+    "protobufjs": "^7.6.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.0",
+    "@types/minimatch": "^5.1.2"
+  }
+}

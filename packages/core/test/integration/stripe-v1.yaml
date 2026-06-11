@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Stripe Example API
+  version: "2020-08-27"
+paths:
+  /v1/charges:
+    post:
+      summary: Create a charge
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [amount, currency]
+              properties:
+                amount:
+                  type: integer
+                currency:
+                  type: string
+                source:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  amount:
+                    type: integer
+                  currency:
+                    type: string

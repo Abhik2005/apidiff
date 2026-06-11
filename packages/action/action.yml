@@ -1,0 +1,20 @@
+name: 'Semantic API Diff'
+description: 'Compare API specs semantically'
+inputs:
+  base-spec:
+    description: 'Path or ref to base spec (e.g. main:openapi.yaml)'
+    required: true
+  head-spec:
+    description: 'Path or ref to head spec (e.g. pr-branch:openapi.yaml)'
+    required: true
+  fail-on-breaking:
+    description: 'Fail the action if breaking changes are found'
+    required: false
+    default: 'true'
+  format:
+    description: 'Output format (markdown, json, terminal)'
+    required: false
+    default: 'markdown'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
