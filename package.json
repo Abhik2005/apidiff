@@ -2,6 +2,8 @@
   "name": "apidiff-monorepo",
   "private": true,
   "type": "module",
+  "description": "Semantic API Diff Tool",
+  "license": "MIT",
   "scripts": {
     "build": "pnpm -r run build",
     "test": "vitest run",

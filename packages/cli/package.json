@@ -1,7 +1,8 @@
 {
   "name": "@apidiff/cli",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "CLI for apidiff",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "bin": {

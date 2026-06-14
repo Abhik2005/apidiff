@@ -121,3 +121,6 @@ packages/*/build/
 
 # AI Documentation
 AI_docs/
+
+# Testing folder
+testing_folder/
