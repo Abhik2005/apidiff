@@ -6,7 +6,17 @@
 
 A powerful, semantic diffing tool for APIs. `apidiff` analyzes OpenAPI 3.x, Swagger 2.0, Protobuf, and GraphQL specifications to detect breaking changes, additions, and modifications.
 
-![Demo](https://dummyimage.com/800x400/000/fff&text=apidiff+terminal+demo) <!-- Replace with asciinema or gif -->
+### Output Example
+```text
+$ apidiff v1.yaml v2.yaml
+
+⚠️  Parameter 'additionalMetadata' in query changed type from string to integer.
+   Location: POST /pet/{petId}/uploadImage (param: additionalMetadata) (field: query)
+   Consequence: Clients sending the old type will receive validation errors.
+   Migration: Update clients to send the new type (integer) for 'additionalMetadata'.
+
+Summary: 0 breaking, 1 warnings, 0 info
+```
 
 ## Features
 - **Semantic Diffing**: Understands API structure, not just text changes.
