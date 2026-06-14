@@ -79,5 +79,17 @@ export function runRules(diff: DiffSet, context: RuleContext): SemanticChange[] 
   const enabledRules = BUILT_IN_RULES.filter(
     r => !context.config.disabledRules.includes(r.id)
   );
-  return enabledRules.flatMap(r => r.apply(diff, context));
+  
+  return enabledRules.flatMap(r => {
+    const changes = r.apply(diff, context);
+    const override = context.config.ruleSeverityOverrides && context.config.ruleSeverityOverrides[r.id];
+    
+    if (override) {
+      return changes.map(change => ({
+        ...change,
+        severity: override
+      }));
+    }
+    return changes;
+  });
 }

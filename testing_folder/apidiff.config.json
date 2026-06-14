@@ -1,0 +1,18 @@
+{
+  "failOn": "breaking",
+  "ignorePaths": [
+    "/internal/**",
+    "/experimental/v2/**"
+  ],
+  "ruleSeverityOverrides": {
+    "PARAM_TYPE_CHANGED": "warning"
+  },
+  "disabledRules": [
+    "PARAM_REMOVED"
+  ],
+  "output": {
+    "format": "terminal",
+    "color": true,
+    "summary": true
+  }
+}

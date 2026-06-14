@@ -49,19 +49,26 @@ Arguments:
 Options:
   -f, --format <type>   Output format (terminal, json, markdown, html) (default: "terminal")
   -o, --out <path>      Output file path (prints to stdout if omitted)
-  --fail-on <level>     Fail exit code if changes of this level or higher are found (error, warn, info) (default: "error")
+  --fail-on <level>     Fail exit code if changes of this level or higher are found (breaking, warning, info) (default: "breaking")
   -h, --help            display help for command
 ```
 
 ## Configuration
 
-Place an `apidiff.config.json` in your project root to customize rules:
+Place an `apidiff.config.json` in your project root to customize rules, adjust fail thresholds, and ignore specific paths:
 
 ```json
 {
-  "rules": {
-    "ENDPOINT_REMOVED": "error",
-    "PARAMETER_ADDED": "warn"
+  "failOn": "breaking",
+  "ignorePaths": [
+    "/internal/**",
+    "/experimental/v2/**"
+  ],
+  "disabledRules": [
+    "PARAM_REMOVED"
+  ],
+  "ruleSeverityOverrides": {
+    "PARAM_TYPE_CHANGED": "warning"
   }
 }
 ```

@@ -24,7 +24,7 @@ We welcome contributions! Please follow these guidelines to ensure a smooth proc
 ## Adding a New Rule
 
 1. Open `packages/core/src/rules/index.ts` and add a new Rule class that implements the `IRule` interface.
-2. Register the rule in `packages/core/src/engine/index.ts`.
+2. Register the rule in `packages/core/src/rules/index.ts` in the `BUILT_IN_RULES` array.
 3. Add the rule to the table in `RULES.md`.
 4. Write tests for your rule.
 

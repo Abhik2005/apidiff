@@ -328,7 +328,7 @@ paths:
         description: Additional Metadata
         required: false
         schema:
-          type: string
+          type: integer
       requestBody:
         content:
           application/octet-stream:
