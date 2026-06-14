@@ -1,5 +1,9 @@
 # Semantic API Diff Tool (apidiff)
 
+[![npm version](https://img.shields.io/npm/v/@apidiff/cli.svg)](https://www.npmjs.com/package/@apidiff/cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 A powerful, semantic diffing tool for APIs. `apidiff` analyzes OpenAPI 3.x, Swagger 2.0, Protobuf, and GraphQL specifications to detect breaking changes, additions, and modifications.
 
 ![Demo](https://dummyimage.com/800x400/000/fff&text=apidiff+terminal+demo) <!-- Replace with asciinema or gif -->
